@@ -18,15 +18,3 @@ class Producto:
         texto = self.nombre + " | Precio: " + str(self.precio) + " | Stock: " + str(self.stock_actual)
         return texto
 
-
-# Pruebas rapidas para ver si la clase funciona bien
-p1 = Producto("COCAC", "Coca-Cola", 1.5, "Disfruta tu bebida!", "A1", 10)
-print(p1)
-print("Codigo:", p1.codigo_cinco_letras)
-print("Posicion en la matriz:", p1.codigo_matriz)
-
-p1.actualizar_stock(-3)
-print("Stock despues de vender 3:", p1.stock_actual)
-
-p1.actualizar_stock(5)
-print("Stock despues de reponer 5:", p1.stock_actual)

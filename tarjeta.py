@@ -14,13 +14,3 @@ class Tarjeta:
         texto = "Tarjeta #" + str(self.numero_hash) + " | Saldo: " + str(self.saldo_disponible)
         return texto
 
-
-# Pruebas rapidas
-t1 = Tarjeta(123456789, 50.0)
-print(t1)
-
-t1.descontar_saldo(10.5)
-print("Saldo despues de pagar 10.5:", t1.saldo_disponible)
-
-t1.descontar_saldo(20.0)
-print("Saldo despues de pagar 20.0:", t1.saldo_disponible)
