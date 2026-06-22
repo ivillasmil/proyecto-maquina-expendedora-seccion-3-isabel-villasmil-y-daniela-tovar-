@@ -43,24 +43,3 @@ class Reporte:
         return texto
 
 
-# Pruebas rapidas para verificar que todo funciona
-from producto import Producto
-
-p1 = Producto("PEPSI", "Pepsi", 1.25, "Gracias por tu compra!", "B2", 8)
-
-# Probar Venta
-v1 = Venta(p1.nombre, p1.precio)
-print(v1)
-
-# Probar Reporte
-reporte = Reporte()
-reporte.agregar_venta(v1)
-reporte.agregar_venta(Venta("Doritos", 2.0))
-print(reporte)
-
-# Probar Restock
-restock = Restock()
-print("Stock antes:", p1.stock_actual)
-restock.registrar_reposicion(p1, 5)
-print("Stock despues de reponer:", p1.stock_actual)
-print(restock)

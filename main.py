@@ -1,6 +1,11 @@
 # Integrantes: Isabel Villasmil, Daniela Tovar
+# Programa principal de la maquina expendedora (Version con Persistencia)
 from maquina import MaquinaExpendedora
 
-print("Iniciando pruebas de compra...")
-m = MaquinaExpendedora()
-m.iniciar_programa()
+def main():
+    print("Iniciando sistema de la maquina...")
+    m = MaquinaExpendedora()
+    m.iniciar_programa()
+
+if __name__ == "__main__":
+    main()
