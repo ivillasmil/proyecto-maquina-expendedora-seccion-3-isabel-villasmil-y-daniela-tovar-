@@ -1,0 +1,20 @@
+A1|CocaC|Coca-Cola Classic 355 ml|1.1|¡Disfruta de tu Coca-Cola bien fría!|10
+B1|Pepsi|Pepsi lata 355 ml|1.1|Pepsi: ¡Es lo que te gusta!|10
+C1|Fanta|Fanta Naranja 355 ml|1.2|¡Fanta Naranja es un Hit!|10
+D1|Malta|Maltín Polar lata|1|¡Maltín Polar: Energía natural!|10
+A2|Chint|Chinotto 355 ml|1.1|¡Disfruta la bebida cítrica número uno en el mundo!|9
+B2|SvnUp|SevenUp 355 ml|1.2|7UP: mereces lo mejor|10
+C2|Goldn|Golden naranja lata 355 ml|1.1|Golden: ¡El sabor de tu diversión!|10
+D2|Aquak|Aguakina Schweppes 355 ml|1.0|Tómate tu tiempo con Schweppes|10
+A3|Ruffl|Ruffles Deli Size|2|Disfruta tus Ruffles onduladas|10
+B3|Dorit|Doritos Deli Size|2.25|Doritos para los atrevidos|10
+C3|Cheet|Cheetos Deli Size|1.75|Es cosa de Cheetos|10
+D3|Yuqts|Yuquitas Caribas|0.75|Disfruta Yuquitas Caribas por su sabor!|10
+A4|Savoy|Chocolate Savoy 100 g|0.6|¡Savoy con sabor venezolano!|10
+B4|Hrshy|Barra Hershey's 43 g|0.5|Hershey's: El sabor de los buenos recuerdos|10
+C4|Snkrs|Snickers 50g|1.5|¡No eres tu cuando tienes hambre!|10
+D4|Milky|Milky Way 50g|1.5|Milky Way!|10
+A5|Flips|Flips Chocolate|1.5|¡Flips!|10
+B5|Abcts|Abcitoos Lonchera|1.7|Crocante y delicioso con divertidas formas de letras|10
+C5|Fruty|Fruty Aros Lonchera|1.8|Forma de divertidos aros de colores con sabor a frutas|10
+D5|Cnchf|Cronch Flakes lonchera|1.6|Cronch Flakes es enriquecido con 8 vitaminas y hierro|10
