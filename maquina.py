@@ -1,6 +1,7 @@
 # Integrantes: Isabel Villasmil, Daniela Tovar
 import requests
 import os
+import json
 import matplotlib.pyplot as plt
 from producto import Producto
 from tarjeta import Tarjeta
@@ -55,6 +56,23 @@ class MaquinaExpendedora:
                     archivo.write(linea)
         except Exception as e:
             print("Error al guardar el inventario local:", e)
+
+    def leer_json_local_de_clientes(self):
+        """
+        Lee la informacion de clientes desde el archivo local clientes.json.
+        """
+        ruta_clientes = os.path.join(os.path.dirname(__file__), "clientes.json")
+        if os.path.exists(ruta_clientes):
+            with open(ruta_clientes, "r", encoding="utf-8") as archivo:
+                datos_clientes = json.load(archivo)
+                for item in datos_clientes:
+                    nueva_tarjeta = Tarjeta(
+                        numero_hash=hash(item.get("id", 0)),
+                        saldo_disponible=item.get("saldo", 0.0)
+                    )
+                    self.tarjetas_registradas.append(nueva_tarjeta)
+        else:
+            print("Archivo de clientes locales no encontrado.")
 
     def cargar_archivos_iniciales(self):
         """
@@ -115,18 +133,10 @@ class MaquinaExpendedora:
 
         # 3. Cargar la lista oficial de clientes y sus tarjetas
         try:
-            respuesta_clientes = requests.get(self.url_clientes)
-            datos_clientes = respuesta_clientes.json()
-            for item in datos_clientes:
-                # Se utiliza la función hash para ofuscar el identificador por seguridad
-                nueva_tarjeta = Tarjeta(
-                    numero_hash=hash(item.get("id", 0)),
-                    saldo_disponible=item.get("saldo", 0.0)
-                )
-                self.tarjetas_registradas.append(nueva_tarjeta)
+            self.leer_json_local_de_clientes()
             print("Se cargaron", len(self.tarjetas_registradas), "tarjetas correctamente.")
         except Exception as e:
-            print("Error al cargar las tarjetas de la API.")
+            print("Error al cargar las tarjetas locales:", e)
 
     def mostrar_catalogo_matriz(self):
         """
